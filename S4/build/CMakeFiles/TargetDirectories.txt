@@ -1,0 +1,6 @@
+/mnt/c/Users/UsEr/Desktop/PAOO/S4/build/CMakeFiles/main.exe.dir
+/mnt/c/Users/UsEr/Desktop/PAOO/S4/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/UsEr/Desktop/PAOO/S4/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/UsEr/Desktop/PAOO/S4/build/lib/CMakeFiles/lib.dir
+/mnt/c/Users/UsEr/Desktop/PAOO/S4/build/lib/CMakeFiles/edit_cache.dir
+/mnt/c/Users/UsEr/Desktop/PAOO/S4/build/lib/CMakeFiles/rebuild_cache.dir
