@@ -1,1 +1,1 @@
-add_library(lib lab.cpp)
+add_library(lib bank.cpp)
