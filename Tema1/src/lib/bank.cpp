@@ -2,17 +2,18 @@
 #include <cstring>
 #include "bank.hpp"
 
-//Constructor
+// Constructor
 BankAccount::BankAccount(const std::string accountHolder, int age, char *address, double balance){
     this->accountHolder=accountHolder;
     this->age=age;
     this->address=address;
     this->balance=balance;
     
+    // Print the account that was created
     std::cout << "A bank account was created. Name: " << accountHolder << "; Age: " << age << "; Address: " << address << "; Initial balance: " << balance << std::endl;
 }
 
-//Copy constructor
+// Copy constructor
 BankAccount::BankAccount(const BankAccount& ba){
     this->accountHolder=ba.accountHolder;
     this->age=age;
@@ -21,10 +22,11 @@ BankAccount::BankAccount(const BankAccount& ba){
     memcpy(this->address, ba.address, n);
     this->balance=balance;
 
+    // Print the account that was copied
     std::cout << "The " << accountHolder << "'s bank account was copied!" << std::endl;
 }
 
-//move constructor
+// Move constructor
 BankAccount::BankAccount(BankAccount&& prevBankAccount){
     this->accountHolder=prevBankAccount.accountHolder;
     this->age=prevBankAccount.age;
@@ -32,35 +34,45 @@ BankAccount::BankAccount(BankAccount&& prevBankAccount){
     delete [] prevBankAccount.address;
     this->balance=prevBankAccount.balance;
     
+    // Print the account that was moved
     std::cout << "The " << accountHolder << "'s bank account was moved!" << std::endl;
 }
 
 
-//destructor
+// Destructor
 BankAccount::~BankAccount(){
+    // deallocate the pointers
     delete [] this->address;
     
     std::cout << "The bank account was deleted!" << std::endl;
 }
 
-//metodă de depunere a unei sume în cont
+// Method to deposit units in current bank account
 void BankAccount::deposit(double amount) {
+    // The amount is added to the current balance
     balance += amount;
-    std::cout << "Deposited " << amount << " units. Current balance: " << balance << std::endl;
+
+    // Print the updated balance
+    std::cout << "Deposited " << amount << " units. Current balance for " << accountHolder <<": " << balance << std::endl;
 }
 
-//metodă de retragere a unei sume din cont
+// Method to withdraw units from current bank account
 void BankAccount::withdraw(double amount) {
+    // Check if there are enough units to be withdrew
+    // units will be withdrew otherwise a message will be printed
     if (balance >= amount) {
         balance -= amount;
-        std::cout << "Withdrawn " << amount << " units. Current balance: " << balance << std::endl;
+        std::cout << "Withdrawn " << amount << " units. Current balance for " << accountHolder <<": " << balance << std::endl;
     } else {
-        std::cout << "Insufficient funds. Current balance: " << balance << std::endl;
+        std::cout << "Insufficient funds. Current balance for " << accountHolder <<": " << balance << std::endl;
     }
 }
 
-//metodă de transfer a unei sume din cont
+// Method to transfer units from current bank account to another
 void BankAccount::transfer(BankAccount &destination, double amount) {
+    // Check if there are enough units to be transfered
+    // units will be transfered and will be added in destination account
+    // otherwise a message will be printed
     if (balance >= amount) {
         balance -= amount;
         destination.balance += amount;
@@ -73,7 +85,7 @@ void BankAccount::transfer(BankAccount &destination, double amount) {
     }
 }
 
-//metodă de afișsare al soldului curent din cont
+// Method to display the balance of current bank account;
 void BankAccount::displayBalance() const {
     std::cout << "Current balance for account holder " << accountHolder << ": " << balance << std::endl;
 }
