@@ -17,10 +17,16 @@ int main() {
     BankAccount account1(accountHolder1, 22, address1, 5000);
     BankAccount account2(accountHolder2, 41, address2, 3000);
 
+    BankAccount account3 = account2; //copy
+
+    BankAccount account4(std::move(account2)); //move
+
     // Afișăm soldurile inițiale
     std::cout << "Initial Balances:" << std::endl;
     account1.displayBalance();
     account2.displayBalance();
+    account3.displayBalance();
+    account4.displayBalance();
 
     // Efectuăm operațiuni pe conturi
     account1.deposit(1000);
