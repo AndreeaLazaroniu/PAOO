@@ -1,1 +1,1 @@
-add_library(lib Car.cpp)
+add_library(lib Car.cpp SportCar.cpp)
