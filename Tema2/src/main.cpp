@@ -24,5 +24,11 @@ int main(){
 
     cr1.show();
 
+    Car cr2 = cr1;
+    cr2.show();
+
+    cr=cr2;
+    cr.show();
+
     return 0;
 }

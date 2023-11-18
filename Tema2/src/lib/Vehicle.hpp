@@ -7,6 +7,6 @@ namespace NVehicle{
         public:
             virtual void numberWheels() = 0;
             virtual void show() = 0;
-            virtual void getYear() = 0;
+            virtual int getYear() = 0;
     };
 }

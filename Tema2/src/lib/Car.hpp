@@ -18,7 +18,15 @@ namespace NCar{
                 ~Car();
                 void numberWheels() override;
                 void show() override;
-                void getYear() override;
+                int getYear() override;
+
+                void setYear(int year);
+                void setBrand(char *brand);
+                void setFuel(char *fuel);
+                virtual void showYear();
+
+                Car& operator=(const Car &prevCar);
+                Car& operator=(Car &&prevCar);
     };
 
 }
