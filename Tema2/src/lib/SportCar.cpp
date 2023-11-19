@@ -18,6 +18,6 @@ void SportCar::show(){
     std::cout << "Max Speed:" << this->maxSpeed << std::endl;
 }
 
-void SportCar::getYear(){
-    Car::getYear();
+int SportCar::getYear(){
+    return Car::getYear();
 }

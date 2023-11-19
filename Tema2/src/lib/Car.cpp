@@ -50,6 +50,18 @@ int Car::getYear(){
     return this->year;
 }
 
+void Car::setYear(int year){
+    this->year = year;
+}
+
+void Car::setBrand(char *brand){
+    this->brand = brand;
+}
+
+void Car::setFuel(char *fuel){
+    this->fuel = fuel;
+}
+
 void Car::showYear(){
     std::cout << "Year: " << this->year << std::endl;
 }

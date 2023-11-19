@@ -10,7 +10,7 @@ namespace NSportCar{
             SportCar(int year, char *brand, char* fuel, int maxSpeed);
             void printSpeed();
             void show() override;
-            void getYear() override;
+            int getYear() override;
     };
 }
 
