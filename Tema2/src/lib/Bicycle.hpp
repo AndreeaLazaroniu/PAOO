@@ -7,9 +7,10 @@ namespace NBicycle{
         private:
             int year;
         public:
-            Bicycle(int year);
+            Bicycle(int year); //constructor
 
             void drive();
+            //overrides of pure virtual methods
             void numberWheels() override;
             void show() override;
             int getYear() override;

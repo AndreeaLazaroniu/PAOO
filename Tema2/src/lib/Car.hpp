@@ -9,7 +9,6 @@ namespace NCar{
                 int year;
                 char *brand;
                 char *fuel;
-                int isHighSpeedVehicle;
 
             public:
                 Car(int year, char* brand, char* fuel);

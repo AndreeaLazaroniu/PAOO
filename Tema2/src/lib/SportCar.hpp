@@ -4,7 +4,7 @@
 
 namespace NSportCar{
     class SportCar: public NCar::Car{
-        int maxSpeed;
+        int maxSpeed; //private by default
 
         public:
             SportCar(int year, char *brand, char* fuel, int maxSpeed);
