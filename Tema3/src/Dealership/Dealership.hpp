@@ -1,5 +1,6 @@
 #include "Car.hpp"
 #include <vector>
+#include <semaphore>
 #include <memory>
 #include "Mutex.hpp"
 
@@ -12,5 +13,6 @@ public:
 private:
     std::vector<std::shared_ptr<Car> > cars;
     std::mutex& mutex;
+    std::counting_semaphore<1> semaphore;
 };
 
