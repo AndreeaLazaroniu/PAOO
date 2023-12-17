@@ -45,15 +45,17 @@ int main(){
     ford.show();
     std::cout<< "\n"<<std::endl;
 
+    Car ford_2 = std::move(ford); //move constructor
+
     char *brand_new = new char[50];
     memcpy(brand_new, "dacia", 50);
     char *fuel_new = new char[50];
     memcpy(fuel_new, "diesel", 50);
-    Car audi_asg(2018, brand_new, fuel_new);
+    Car audi_asg(2018, brand_new, fuel_new); //copy constructor
     audi_asg.show();
-    audi_asg = ford;
+    audi_asg = ford; //copy assignment
     audi_asg.show();
-    audi_asg = std::move(renault);
+    audi_asg = std::move(renault); //move assignment
     audi_asg.show();
 
     Bicycle bc(2015);

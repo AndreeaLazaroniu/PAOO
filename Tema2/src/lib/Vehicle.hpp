@@ -3,7 +3,7 @@
 #include <string>
 
 namespace NVehicle{
-    class Vehicle{
+    class Vehicle{ //interface
         public:
             virtual void numberWheels() = 0;
             virtual void show() = 0;
